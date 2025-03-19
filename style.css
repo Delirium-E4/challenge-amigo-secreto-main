@@ -1,0 +1,239 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.instructions {
+    font-size: 1rem;
+    color: #555; /* Color gris */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+.instructions strong {
+    font-weight: bold;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.button-container {
+    width: 300px;
+    justify-content: center;
+}
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: "Merriweather", serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de botón */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Alinea los botones en columna (uno debajo del otro) */
+    align-items: center; /* Centra horizontalmente los botones */
+}
+
+button {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+    transform: scale(0.95);
+}
+
+.button-add:active {
+    background-color: #7a7a7a;
+    transform: scale(1.05);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #05DF05;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+    font-size: 16px;
+}
+
+.button-draw img {
+    margin-right: 40px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+    transform: scale(1.05);
+}
+
+.button-draw:active {
+    background-color: #cc0000;
+    transform: scale(0.95);
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 0.8rem;
+    width: 24px;
+    height: 24px;
+    display: inline-block; /* Garantiza que se comporte correctamente en línea */
+    align-items: center; /* Centra verticalmente la "X" */
+    justify-content: center; /* Centra horizontalmente la "X" */
+    text-align: center; /* Alinea el texto en el centro del botón */    
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.button-clear {
+    background-color: var(--color-button); /* Color rojo suave */
+    color: white;
+    border: 2px solid #000; /* Borde del mismo color que el fondo */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    margin-top: 20px; /* Espaciado superior */
+    font-size: 1rem; /* Tamaño del texto */
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+.button-clear:hover {
+    background-color: var(--color-button-hover); /* Rojo más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+.button-clear:active {
+    background-color: #cc0000; /* Rojo más oscuro al hacer clic */
+    transform: scale(0.95); /* Pequeña contracción al hacer clic */
+}
